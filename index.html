@@ -2,840 +2,830 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewpoint" content="width=device-width">
-  <title>TRAVID | HOME</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/fav.png">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width">
+    <title>TRAVID | HOME</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" type="image/x-icon"
+        href="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/fav.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
-  <style>
-    ::-webkit-scrollbar {
-      width: 0px;
-      overflow: hidden;
-    }
+    <style>
+        ::-webkit-scrollbar {
+            width: 0px;
+            overflow: hidden;
+        }
 
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Roboto", sans-serif;
-    }
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif;
+        }
 
-    body,
-    html {
-      line-height: 1.8;
-      accent-color: #5E17EB;
-    }
+        body,
+        html {
+            line-height: 1.8;
+            accent-color: #5E17EB;
+        }
 
-    .bgimg {
-      background-position: right;
-      background-repeat: no-repeat;
-      background-size: auto;
-      background-color: white;
-    }
+        .bgimg {
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-color: white;
+        }
 
-    .w3-top {
-      position: sticky;
-      width: 100%;
-    }
+        .w3-top {
+            position: sticky;
+            width: 100%;
+        }
 
-    .w3-bar .w3-button {
-      padding: 16px;
-    }
+        .w3-bar .w3-button {
+            padding: 16px;
+        }
 
-    .w3-row-padding {
-      margin: 0 -16px
-    }
+        .w3-row-padding {
+            margin: 0 -16px
+        }
 
-    .flexBR {
-      flex-basis: 100%;
-    }
+        .flexBR {
+            flex-basis: 100%;
+        }
 
-    .textBoldest {
-      color: #000000;
-      text-shadow: 1px 0 #000000;
-      letter-spacing: 4px;
-      font-weight: bold;
-      font-size: 46px;
-      font-weight: 900;
-    }
+        .textBoldest {
+            color: #000000;
+            text-shadow: 1px 0 #000000;
+            letter-spacing: 4px;
+            font-weight: bold;
+            font-size: 46px;
+            font-weight: 900;
+        }
 
-    .textBold {
-      color: #000000;
-      text-shadow: 1px 0 #000000;
-      letter-spacing: 1px;
-      font-weight: bold;
-      font-weight: 900;
-    }
+        .textBold {
+            color: #000000;
+            text-shadow: 1px 0 #000000;
+            letter-spacing: 1px;
+            font-weight: bold;
+            font-weight: 900;
+        }
 
-    footer {
-      display: block;
-      position: fixed;
-      background-color: #f8f9fa;
-      bottom: 0;
-      width: 100%;
-      font: 15px;
-    }
+        footer {
+            display: block;
+            position: fixed;
+            background-color: #f8f9fa;
+            bottom: 0;
+            width: 100%;
+            font: 15px;
+        }
 
-    .footer-text {
-      display: block;
-      text-align: center;
-      padding: 1.5rem;
-      box-sizing: border-box;
-      color: #6c757d;
-    }
+        .footer-text {
+            display: block;
+            text-align: center;
+            padding: 1.5rem;
+            box-sizing: border-box;
+            color: #6c757d;
+        }
 
-    .footerLink {
-      font-weight: 700;
-      text-decoration: none;
-    }
+        .footerLink {
+            font-weight: 700;
+            text-decoration: none;
+        }
 
-    .introSuperContainer {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 128em;
-    }
+        .introSuperContainer {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 128em;
+        }
 
-    .introContainer {
-      display: flex;
-      margin-top: 10em;
-      padding: 0 6em 0 6em;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
+        .introContainer {
+            display: flex;
+            margin-top: 10em;
+            padding: 0 6em 0 6em;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
 
-    .langAvailable {
-      display: flex;
-      margin-left: -1.1em;
-      margin-top: 1em;
-      flex: 1 1 0;
-    }
+        .langAvailable {
+            display: flex;
+            margin-left: -1.1em;
+            margin-top: 1em;
+            flex: 1 1 0;
+        }
 
-    .introImg {
-      justify-content: center;
-      /* width: auto; */
-      margin: auto;
-      flex: 0 1 0;
-    }
+        .introImg {
+            justify-content: center;
+            /* width: auto; */
+            margin: auto;
+            flex: 0 1 0;
+        }
 
-    .submitButton {
-      display: flex;
-      justify-content: space-between;
-      background-color: #5E17EB;
-      border: none;
-      color: white;
-      width: 11em;
-      margin-top: 1.7em;
-      padding: 10px 20px 10px 20px;
-      text-align: center;
-      display: flex;
-      font-size: 16px;
-      border-radius: 30px;
-      font-weight: bold;
-      text-decoration: none;
-    }
+        .submitButton {
+            display: flex;
+            justify-content: space-between;
+            background-color: #5E17EB;
+            border: none;
+            color: white;
+            width: 11em;
+            margin-top: 1.7em;
+            padding: 10px 20px 10px 20px;
+            text-align: center;
+            display: flex;
+            font-size: 16px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+        }
 
-    .submitButtonSmallCircle {
-      background-color: #fff;
-      border-radius: 100%;
-      width: 30px;
-      font-weight: bold;
-      color: #5E17EB;
-      right: 2px;
-    }
+        .submitButtonSmallCircle {
+            background-color: #fff;
+            border-radius: 100%;
+            width: 30px;
+            font-weight: bold;
+            color: #5E17EB;
+            right: 2px;
+        }
 
-    #radioButtonUpload {
-      display: block;
-      position: relative;
-      margin-right: auto;
-      margin-left: auto;
-      width: 50%;
-    }
+        #radioButtonUpload {
+            display: block;
+            position: relative;
+            margin-right: auto;
+            margin-left: auto;
+            width: 50%;
+        }
 
-    .arrow {
-      border: solid black;
-      border-width: 0 3px 3px 0;
-      display: inline-block;
-      padding: 3px;
-    }
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
 
-    .right {
-      transform: rotate(-45deg);
-      -webkit-transform: rotate(-45deg);
-    }
+        .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
 
-    .rad-label {
-      float: left;
-      display: flex;
-      align-items: center;
+        .rad-label {
+            float: left;
+            display: flex;
+            align-items: center;
 
-      border-radius: 100px;
-      padding: 14px 16px;
-      margin: 0px 0;
+            border-radius: 100px;
+            padding: 14px 16px;
+            margin: 0px 0;
 
-      cursor: pointer;
-      transition: .3s;
-    }
+            cursor: pointer;
+            transition: .3s;
+        }
 
-    .rad-input {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 1px;
-      height: 1px;
-      opacity: 0;
-      z-index: -1;
-    }
+        .rad-input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            z-index: -1;
+        }
 
-    .rad-design {
-      width: 12px;
-      height: 12px;
-      border-radius: 100px;
+        .rad-design {
+            width: 12px;
+            height: 12px;
+            border-radius: 100px;
 
-      background: linear-gradient(to right bottom, #5e17eb, rgb(94, 23, 235));
-      position: relative;
-    }
+            background: linear-gradient(to right bottom, #5e17eb, rgb(94, 23, 235));
+            position: relative;
+        }
 
-    .rad-design::before {
-      content: '';
+        .rad-design::before {
+            content: '';
 
-      display: block;
-      width: inherit;
-      height: inherit;
-      border-radius: 100%;
+            display: block;
+            width: inherit;
+            height: inherit;
+            border-radius: 100%;
 
-      border: 1px solid rgb(156, 150, 150);
+            border: 1px solid rgb(156, 150, 150);
 
 
-      background: hsl(0, 0%, 90%);
-      transform: scale(1.1);
-      transition: .3s;
-    }
+            background: hsl(0, 0%, 90%);
+            transform: scale(1.1);
+            transition: .3s;
+        }
 
-    .rad-input:checked+.rad-design::before {
-      transform: scale(0);
-    }
+        .rad-input:checked+.rad-design::before {
+            transform: scale(0);
+        }
 
-    .rad-designIndex {
-      width: 22px;
-      height: 22px;
-    }
+        .rad-designIndex {
+            width: 22px;
+            height: 22px;
+        }
 
-    .rad-designIndex::before {
-      width: inherit;
-      height: inherit;
-    }
+        .rad-designIndex::before {
+            width: inherit;
+            height: inherit;
+        }
 
-    .rad-input:checked+.rad-designIndex::before {
-      transform: scale(0);
-    }
+        .rad-input:checked+.rad-designIndex::before {
+            transform: scale(0);
+        }
 
-    .rad-text {
-      color: hsl(0, 0%, 60%);
-      margin-left: 5px;
-      letter-spacing: 0px;
-      text-transform: uppercase;
-      font-size: 16px;
-      font-weight: 400;
+        .rad-text {
+            color: hsl(0, 0%, 60%);
+            margin-left: 5px;
+            letter-spacing: 0px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 400;
 
-      transition: .3s;
-    }
+            transition: .3s;
+        }
 
-    .rad-input:checked~.rad-text {
-      color: hsl(0, 0%, 40%);
-    }
+        .rad-input:checked~.rad-text {
+            color: hsl(0, 0%, 40%);
+        }
 
-    .rad-textIndex {
-      margin-left: 10px;
-    }
+        .rad-textIndex {
+            margin-left: 10px;
+        }
 
-    #videoTranslatorChangingText {
-      text-align: left;
-      font-weight: 900;
-      font-size: 56px;
-      margin-bottom: -10px;
-      margin-top: 5px;
-      position: absolute;
-    }
+        #videoTranslatorChangingText {
+            text-align: left;
+            font-weight: 900;
+            font-size: 56px;
+            margin-bottom: -10px;
+            margin-top: 5px;
+            position: absolute;
+        }
 
-    .changingQuotes {
-      display: none;
-    }
+        .changingQuotes {
+            display: none;
+        }
 
-    .trasnlateVideosOnlineSuperContainer {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 128em;
-    }
+        .trasnlateVideosOnlineSuperContainer {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 128em;
+        }
 
-    .translateVideosOnlineContainer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0 10vw;
-      align-items: center;
-      background-color: #F7F7F8;
-      box-shadow: 0 4px 8px -1px rgb(117, 116, 116);
-      padding: 2rem 5rem 2rem 5rem;
-      margin: 0rem 6em 0 6em;
-      border-radius: 4em;
-      width: auto;
-    }
+        .translateVideosOnlineContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0 10vw;
+            align-items: center;
+            background-color: #F7F7F8;
+            box-shadow: 0 4px 8px -1px rgb(117, 116, 116);
+            padding: 2rem 5rem 2rem 5rem;
+            margin: 0rem 6em 0 6em;
+            border-radius: 4em;
+            width: auto;
+        }
 
-    /* .shadow{
+        /* .shadow{
         box-shadow: 10px 10px 50px rgba(0,0,0,0.3);
         border-top: 1px solid rgba(255,255,255,0.5);
         border-left: 1px solid rgba(255,255,255,0.5);
     } */
-    .heading-block {
-      text-align: center;
-      letter-spacing: 2px;
-      word-spacing: 2px;
-      flex: 1 0 0;
-    }
+        .heading-block {
+            text-align: center;
+            letter-spacing: 2px;
+            word-spacing: 2px;
+            flex: 1 0 0;
+        }
 
-    .cardglassSuperContainer {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 100em;
-    }
+        .cardglassSuperContainer {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100em;
+        }
 
-    .soundwaveBG {
-      position: absolute;
-      opacity: 40%;
-      width: 100%;
-      /* margin: 0 -20vw 0 -20vw; */
-      height: 10vw;
-      z-index: -1;
-    }
+        .soundwaveBG {
+            position: absolute;
+            opacity: 40%;
+            width: 100%;
+            /* margin: 0 -20vw 0 -20vw; */
+            height: 10vw;
+            z-index: -1;
+        }
 
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 0em 6em;
-      flex: 1 0 0;
-      margin-left: 5em;
-      margin-right: 5em;
-    }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0em 6em;
+            flex: 1 0 0;
+            margin-left: 5em;
+            margin-right: 5em;
+        }
 
-    .card {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+        .card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
 
-      text-align: center;
-      max-height: auto;
-      max-width: 28em;
-      transition: 0.3s;
-      padding: 3em;
-      flex: 1 0 0;
+            text-align: center;
+            max-height: auto;
+            max-width: 28em;
+            transition: 0.3s;
+            padding: 3em;
+            flex: 1 0 0;
 
-      border-radius: 3em;
-      backdrop-filter: blur(10px);
-      background-color: #F7F7F8;
-      box-shadow: 0 4px 8px -1px rgb(117, 116, 116);
-      border-top: 1px solid rgba(255, 255, 255, 0.5);
-      border-left: 1px solid rgba(255, 255, 255, 0.5);
-    }
+            border-radius: 3em;
+            backdrop-filter: blur(10px);
+            background-color: #F7F7F8;
+            box-shadow: 0 4px 8px -1px rgb(117, 116, 116);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+        }
 
-    .card:hover {
-      background-color: rgb(255, 255, 255);
-    }
+        .card:hover {
+            background-color: rgb(255, 255, 255);
+        }
 
-    .glassCardHeading {
-      margin-top: 0.7em;
-      font-size: clamp(1em, 3vw, 3em);
-      font-weight: 900;
-      flex: 1 0 0;
-    }
+        .glassCardHeading {
+            margin-top: 0.7em;
+            font-size: clamp(1em, 3vw, 3em);
+            font-weight: 900;
+            flex: 1 0 0;
+        }
 
-    /* hr {
+        /* hr {
           border: 1px solid rgba(255, 255, 255, 0.747);
           border-radius: 1px;
       } */
 
-    .faqSuperContainer {
-      display: block;
-      max-width: 125em;
-      margin-left: auto;
-      margin-right: auto;
-    }
+        .faqSuperContainer {
+            display: block;
+            max-width: 125em;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .faqContainer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 0 10vw;
-      align-items: center;
-      margin: 9rem 6em 0 6em;
-      border-radius: 4em;
-      width: auto;
-      flex: 1 0 0;
-    }
+        .faqContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0 10vw;
+            align-items: center;
+            margin: 9rem 6em 0 6em;
+            border-radius: 4em;
+            width: auto;
+            flex: 1 0 0;
+        }
 
-    .faqImgCircle {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      width: 10em;
-      height: 10em;
-      background-color: #F7F7F8;
-      box-shadow: 0 4px 8px -1px rgb(117, 116, 116);
-      flex: 1 0 0;
-    }
+        .faqImgCircle {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 10em;
+            height: 10em;
+            background-color: #F7F7F8;
+            box-shadow: 0 4px 8px -1px rgb(117, 116, 116);
+            flex: 1 0 0;
+        }
 
-    .faqQuestionsContainer {
-      flex: 1 2 0;
-      text-align: justify;
-      flex: 1 0 0;
-    }
+        .faqQuestionsContainer {
+            flex: 1 2 0;
+            text-align: justify;
+            flex: 1 0 0;
+        }
 
-    .faqQuesTitle {
-      font-size: 1.5em;
-      font-weight: 700;
-      width: 100%;
-      text-align: left;
-      padding: 0px 10px;
-      cursor: pointer;
-      border: none;
-      outline: none;
-      background-color: white;
-      flex: 1 0 0;
-    }
+        .faqQuesTitle {
+            font-size: 1.5em;
+            font-weight: 700;
+            width: 100%;
+            text-align: left;
+            padding: 0px 10px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: white;
+            flex: 1 0 0;
+        }
 
-    .faqQuesTitle:hover {
-      text-decoration: underline dotted;
-    }
+        .faqQuesTitle:hover {
+            text-decoration: underline dotted;
+        }
 
-    .faqQuesTitle::after {
-      content: '\002B';
-      float: right;
-    }
+        .faqQuesTitle::after {
+            content: '\002B';
+            float: right;
+        }
 
-    .active:after {
-      content: '\2212';
-    }
+        .active:after {
+            content: '\2212';
+        }
 
-    .faqAnswerText {
-      max-height: 0;
-      transition: max-height 0.2s ease-out;
-      font-size: 1.2em;
-      font-weight: 400;
-      line-height: 1.2em;
-      padding: 0px 10px;
-      overflow: hidden;
-      flex: 1 0 0;
-    }
+        .faqAnswerText {
+            max-height: 0;
+            transition: max-height 0.2s ease-out;
+            font-size: 1.2em;
+            font-weight: 400;
+            line-height: 1.2em;
+            padding: 0px 10px;
+            overflow: hidden;
+            flex: 1 0 0;
+        }
 
-    hr {
-      border-color: #000000;
-    }
-  </style>
+        hr {
+            border-color: #000000;
+        }
+    </style>
 
-  <style>
-    .word {
-      position: absolute;
-      opacity: 0;
-      font-weight: 600;
-      font-size: 46px;
-    }
+    <style>
+        .word {
+            position: absolute;
+            opacity: 0;
+            font-weight: 600;
+            font-size: 46px;
+        }
 
-    .letter {
-      display: inline-block;
-      position: relative;
-      /* float: left; */
-      transform: translateZ(25px);
-      transform-origin: 50% 50% 25px;
-    }
+        .letter {
+            display: inline-block;
+            position: relative;
+            /* float: left; */
+            transform: translateZ(25px);
+            transform-origin: 50% 50% 25px;
+        }
 
-    .letter.out {
-      transform: rotateX(90deg);
-      transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    }
+        .letter.out {
+            transform: rotateX(90deg);
+            transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
 
-    .letter.behind {
-      transform: rotateX(-90deg);
-    }
+        .letter.behind {
+            transform: rotateX(-90deg);
+        }
 
-    .letter.in {
-      transform: rotateX(0deg);
-      transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
+        .letter.in {
+            transform: rotateX(0deg);
+            transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
 
-    /* .wisteria {
+        /* .wisteria {
       color: #8e44ad;
     }
-
     .belize {
       color: #2980b9;
     }
-
     .pomegranate {
       color: #c0392b;
     }
-
     .green {
       color: #16a085;
     }
-
     .midnight {
       color: #2c3e50;
     } */
-  </style>
+    </style>
 
 
 </head>
 
 
 <body>
-  <nav style="width:100%">
-    <div class="bgimg"></div>
-  </nav>
+    <nav style="width:100%">
+        <div class="bgimg"></div>
+    </nav>
 
 
-  <header class="w3-top">
-    <div class="w3-bar w3-white w3-card" id="myNavbar">
-      <a href="#" class="w3-bar-item w3-wide">
-        <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/logo.png" style="position:absolute; height:35px; margin-left: 5em;"></img>
-      </a>
-      <div class="w3-right w3-hide-small" style="padding-right: 5rem;">
-        <a href="#" class="w3-bar-item w3-button" style="background-color: #5E17EB; color:white" id="home">HOME</a>
-        <a href="http://192.168.198.31:8080/about" class="w3-bar-item w3-button">TEAM</a>
-        <a href="http://192.168.198.31:8080/demo" class="w3-bar-item w3-button">DEMO</a>
-        <a href="http://192.168.198.31:8080/login" class="w3-bar-item w3-button">SIGN IN</a>
-        <a href="http://192.168.198.31:8080/signup" class="w3-bar-item w3-button">SIGN UP</a>
+    <header class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <a href="#" class="w3-bar-item w3-wide">
+                <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/logo.png"
+                    style="position:absolute; height:35px; margin-left: 5em;"></img>
+            </a>
+            <div class="w3-right w3-hide-small" style="padding-right: 5rem;">
+                <a href="#" class="w3-bar-item w3-button" style="background-color: #5E17EB; color:white"
+                    id="home">HOME</a>
+                <a href="http://192.168.198.31:8080/about" class="w3-bar-item w3-button">TEAM</a>
+                <a href="http://192.168.198.31:8080/demo" class="w3-bar-item w3-button">DEMO</a>
+                <a href="http://192.168.198.31:8080/login" class="w3-bar-item w3-button">SIGN IN</a>
+                <a href="http://192.168.198.31:8080/signup" class="w3-bar-item w3-button">SIGN UP</a>
 
-      </div>
-      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
-        onclick="w3_open()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-  </header>
-
-  <div class="introSuperContainer">
-    <div class="introContainer">
-      <div class="leftText">
-        <div style="text-align:left; font-weight:500; font-size:38px; margin-bottom: -30px;">Face-to-Face</div>
-        <div class="text" style="margin-top: 1em;">
-          <p>
-          <div class="word">Video Translator</div>
-          <div class="word">वीडियो अनुवादक</div>
-          <div class="word">వీడియో అనువాదకుడు</div>
-          <div class="word">भिडियो अनुवादक</div>
-          <div class="word">ভিডিও অনুবাদক</div>
-          </p>
+            </div>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
-        <div
-          style="text-align:left; font-weight: 700; font-size: 21px; color: gray; margin-bottom: -16px; margin-top: 4.5em;">
-          Automatically Translate your .mp4 videos</div>
-        <div style="text-align:left; font-weight: 700; font-size:21px; color:gray;">into 4 languages</div>
-        <div button>
-          <a href="/login" button class="submitButton">
-            <div style="margin-left: 1em;"> Continue</div>
-            <div class="submitButtonSmallCircle"><i class="arrow right"></i></div>
-          </a>
+    </header>
+
+    <div class="introSuperContainer">
+        <div class="introContainer">
+            <div class="leftText">
+                <div style="text-align:left; font-weight:500; font-size:38px; margin-bottom: -30px;">Face-to-Face</div>
+                <div class="text" style="margin-top: 1em;">
+                    <p>
+                    <div class="word">Video Translator</div>
+                    <div class="word">वीडियो अनुवादक</div>
+                    <div class="word">వీడియో అనువాదకుడు</div>
+                    <div class="word">भिडियो अनुवादक</div>
+                    <div class="word">ভিডিও অনুবাদক</div>
+                    </p>
+                </div>
+                <div
+                    style="text-align:left; font-weight: 700; font-size: 21px; color: gray; margin-bottom: -16px; margin-top: 4.5em;">
+                    Automatically Translate your .mp4 videos</div>
+                <div style="text-align:left; font-weight: 700; font-size:21px; color:gray;">into 4 languages</div>
+                <div button>
+                    <a href="/login" button class="submitButton">
+                        <div style="margin-left: 1em;"> Continue</div>
+                        <div class="submitButtonSmallCircle"><i class="arrow right"></i></div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="introImg"><img
+                    src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/world.svg"
+                    width="650px"></img></div>
         </div>
-
-      </div>
-      <div class="introImg"><img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/world.svg" width="650px"></img></div>
     </div>
-  </div>
 
-  <div class="textBoldest" style="text-align:center; margin:5em 0 0.5em 0;">TRANSLATE VIDEOS ONLINE</div>
-  <div class="trasnlateVideosOnlineSuperContainer">
-    <div class="translateVideosOnlineContainer">
-      <div style=" width:auto"><img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/howitworksImg.png" width="450px">
-      </div>
-      <div style="width:50em; text-align: justify;">
-        <span style="font-weight: 400; font-size: 1.5em; line-height: 1em;">
-          As digital communication becomes more visual, we propose that a system that can
-          automatically translate a video of a person speaking in one language into a target
-          language with realistic lip synchronisation is required. The desire to add a visual
-          module into a translation system stems from the fact that the majority of today's
-          information stream is becoming audio-visual. Existing systems can only translate such
-          audiovisual content at the speech-to-speech level, posing significant constraints.
-          As a result, we extend existing face-to-face translation systems by proposing a pipeline
-          that can take a video of a person speaking in the source language and output a video of
-          the same speaker speaking in the target language, with the voice style and lip movements
-          justifying the destination language.
-        </span>
-      </div>
-    </div>
-  </div>
-        
-  <div class="heading-block textBoldest" style="margin: 4em 0 1em 0">HOW IT WORKS</div>
-  <div class="cardglassSuperContainer">
-    <div class="card-container">
-      <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/soundwave2.png" class="soundwaveBG"></img>
-      <div class="card glass">
-        <div class="card-content">
-          <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/indexPage.png" width="auto" height="150em;"
-            style="margin-left:-5em; margin-right:-5em;"></img>
-          <h2 class="glassCardHeading textBold">STEP 01</h2>
-          <p style="font-size: clamp(1.1em, 1.3vw, 1.7em);line-height: 1.3em;">
-            Click on 'Choose Video' to add a video file. Drag and drop your video into the box to choose it.
-          </p>
+    <div class="textBoldest" style="text-align:center; margin:5em 0 0.5em 0;">TRANSLATE VIDEOS ONLINE</div>
+    <div class="trasnlateVideosOnlineSuperContainer">
+        <div class="translateVideosOnlineContainer">
+            <div style=" width:auto"><img
+                    src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/howitworksImg.png"
+                    width="450px">
+            </div>
+            <div style="width:50em; text-align: justify;">
+                <span style="font-weight: 400; font-size: 1.5em; line-height: 1em;">
+                    As digital communication becomes more visual, we propose that a system that can
+                    automatically translate a video of a person speaking in one language into a target
+                    language with realistic lip synchronisation is required. The desire to add a visual
+                    module into a translation system stems from the fact that the majority of today's
+                    information stream is becoming audio-visual. Existing systems can only translate such
+                    audiovisual content at the speech-to-speech level, posing significant constraints.
+                    As a result, we extend existing face-to-face translation systems by proposing a pipeline
+                    that can take a video of a person speaking in the source language and output a video of
+                    the same speaker speaking in the target language, with the voice style and lip movements
+                    justifying the destination language.
+                </span>
+            </div>
         </div>
-      </div>
-       
-
+    </div>
 
     <div class="heading-block textBoldest" style="margin: 4em 0 1em 0">HOW IT WORKS</div>
     <div class="cardglassSuperContainer">
-      <div class="card-container">
-        <img src=".https://raw.githubusercontent.com/human71/TRAVID/main/static/images/soundwave2.png" class="soundwaveBG"></img>
-                
-      <div class="card glass">
-        <div class="card-content">
-          <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/indexPage.png" width="auto" height="150em;"
-            style="margin-left:-5em; margin-right:-5em;"></img>
-          <h2 class="glassCardHeading textBold">STEP 01</h2>
-          <p style="font-size: clamp(1.1em, 1.3vw, 1.7em);line-height: 1.3em;">
-            Click on 'Choose Video' to add a video file. Drag and drop your video into the box to choose it.
-          </p>
-        </div>
-      </div>
+        <div class="card-container">
+            <img src=".https://raw.githubusercontent.com/human71/TRAVID/main/static/images/soundwave2.png" class="soundwaveBG"></img>
 
-      <div class="card glass">
-        <div class="card-content">
-          <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/indexMic.png" width="auto" height="150em;"
-            style="margin-left:-5em; margin-right:-5em;"></img>
-          <h2 class="glassCardHeading textBold">STEP 02</h2>
-          <p style="font-size: clamp(1.1em, 1.3vw, 1.7em);line-height: 1.3em;">
-            Choose the language you wish to translate into and the gender of the speaker in your uploaded video!
-            For the time being, our system supports Hindi, Bengali, Telugu, and Nepali language.
-            Select either male or female as the speaker.
-          </p>
-        </div>
-      </div>
+            <div class="card glass">
+                <div class="card-content">
+                    <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/indexPage.png"
+                        width="auto" height="150em;" style="margin-left:-5em; margin-right:-5em;"></img>
+                    <h2 class="glassCardHeading textBold">STEP 01</h2>
+                    <p style="font-size: clamp(1.1em, 1.3vw, 1.7em);line-height: 1.3em;">
+                        Click on 'Choose Video' to add a video file. Drag and drop your video into the box to choose it.
+                    </p>
+                </div>
+            </div>
 
-      <div class="card glass">
-        <div class="card-content">
-          <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/indexBrain.png" width="auto" height="150em;"
-            style="margin-left:-5em; margin-right:-5em;"></img>
-          <h2 class="glassCardHeading textBold">STEP 03</h2>
-          <p style="font-size: clamp(1.1em, 1.3vw, 1.7em);line-height: 1.3em;">Press the Translate button to start our
-            AI's magic! Your
-            desired
-            translated video will show up within a few minutes. </p>
+            <div class="card glass">
+                <div class="card-content">
+                    <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/indexMic.png"
+                        width="auto" height="150em;" style="margin-left:-5em; margin-right:-5em;"></img>
+                    <h2 class="glassCardHeading textBold">STEP 02</h2>
+                    <p style="font-size: clamp(1.1em, 1.3vw, 1.7em);line-height: 1.3em;">
+                        Choose the language you wish to translate into and the gender of the speaker in your uploaded
+                        video!
+                        For the time being, our system supports Hindi, Bengali, Telugu, and Nepali language.
+                        Select either male or female as the speaker.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card glass">
+                <div class="card-content">
+                    <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/indexBrain.png"
+                        width="auto" height="150em;" style="margin-left:-5em; margin-right:-5em;"></img>
+                    <h2 class="glassCardHeading textBold">STEP 03</h2>
+                    <p style="font-size: clamp(1.1em, 1.3vw, 1.7em);line-height: 1.3em;">Press the Translate button to
+                        start our
+                        AI's magic! Your
+                        desired
+                        translated video will show up within a few minutes. </p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  <div class="faqSuperContainer">
-    <div class="faqContainer">
-      <div style="width:30em;">
-        <div class="faqImgCircle">
-          <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/faqImg.png" style="width:6em; height:auto"></img>
+    <div class="faqSuperContainer">
+        <div class="faqContainer">
+            <div style="width:30em;">
+                <div class="faqImgCircle">
+                    <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/faqImg.png"
+                        style="width:6em; height:auto"></img>
+                </div>
+                <div class="faqHeading textBoldest">Frequently Asked Questions</div>
+            </div>
+            <div class="faqQuestionsContainer">
+                <hr>
+                <button class="faqQuesTitle">What is Face-to-Face Translation?</button>
+                <div class="faqAnswerText">
+                    Face-to-face translation refers to capturing original speech from a source video of a person
+                    speaking,
+                    translating that speech to the desired language and finally generating an output video of the same
+                    person speaking in the translated language, while maintaining lip synchronisation.
+                </div>
+                <hr>
+                <button class="faqQuesTitle">How to use the Translator?</button>
+                <div class="faqAnswerText">
+                    Upload your video to TRAVID, select language, speaker's gender and click on Translate button.
+                    Give us some minute to render and watch the translated video!
+                </div>
+                <hr>
+                <button class="faqQuesTitle">Can I upload movies to translate?</button>
+                <div class="faqAnswerText">
+                    No, right now our system only supports videos that only contains only one speaker. We are
+                    working on dialouge based translation system, hopefully someday you may translate a whole
+                    video into our system.
+                </div>
+                <hr>
+                <button class="faqQuesTitle">How much time it may take to translate?</button>
+                <div class="faqAnswerText">
+                    It completely dependes on the video you are uploading, the frame rate and movememt in the
+                    video is less it takes less time to render.
+                </div>
+                <hr>
+            </div>
         </div>
-        <div class="faqHeading textBoldest">Frequently Asked Questions</div>
-      </div>
-      <div class="faqQuestionsContainer">
-        <hr>
-        <button class="faqQuesTitle">What is Face-to-Face Translation?</button>
-        <div class="faqAnswerText">
-          Face-to-face translation refers to capturing original speech from a source video of a person speaking,
-          translating that speech to the desired language and finally generating an output video of the same
-          person speaking in the translated language, while maintaining lip synchronisation.
-        </div>
-        <hr>
-        <button class="faqQuesTitle">How to use the Translator?</button>
-        <div class="faqAnswerText">
-          Upload your video to TRAVID, select language, speaker's gender and click on Translate button.
-          Give us some minute to render and watch the translated video!
-        </div>
-        <hr>
-        <button class="faqQuesTitle">Can I upload movies to translate?</button>
-        <div class="faqAnswerText">
-          No, right now our system only supports videos that only contains only one speaker. We are
-          working on dialouge based translation system, hopefully someday you may translate a whole
-          video into our system.
-        </div>
-        <hr>
-        <button class="faqQuesTitle">How much time it may take to translate?</button>
-        <div class="faqAnswerText">
-          It completely dependes on the video you are uploading, the frame rate and movememt in the
-          video is less it takes less time to render.
-        </div>
-        <hr>
-      </div>
     </div>
-  </div>
 
 
-  <div style="margin-top: 160px;">&nbsp;</div>
+    <div style="margin-top: 160px;">&nbsp;</div>
 
-  <footer>
-    <div class="footer-text">
-      Copyright © 2022
-      <a class="footerLink" href="http://cs.nits.ac.in/cnlp/">CNLP-NITS.</a>
-      All rights reserved
-    </div>
-  </footer>
+    <footer>
+        <div class="footer-text">
+            Copyright © 2022
+            <a class="footerLink" href="http://cs.nits.ac.in/cnlp/">CNLP-NITS.</a>
+            All rights reserved
+        </div>
+    </footer>
 
 
-  <script>
-    var coll = document.getElementsByClassName("faqQuesTitle");
-    var i;
+    <script>
+        var coll = document.getElementsByClassName("faqQuesTitle");
+        var i;
 
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px";
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
         }
-      });
-    }
-  </script>
+    </script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  
-  <script>
-    $(document).ready(function () {
-      $(".w3-button").click(function () {
-        $(".w3-button").css({ "background-color": "white", "color": "black" })
-        $(this).css({ "background-color": "#5E17EB", "color": "white" });
-      }
-      )
-    });
-  </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-  <script>
-    var words = document.getElementsByClassName('word');
-    var wordArray = [];
-    var currentWord = 0;
+    <script>
+        $(document).ready(function () {
+            $(".w3-button").click(function () {
+                $(".w3-button").css({ "background-color": "white", "color": "black" })
+                $(this).css({ "background-color": "#5E17EB", "color": "white" });
+            }
+            )
+        });
+    </script>
 
-    words[currentWord].style.opacity = 1;
-    for (var i = 0; i < words.length; i++) {
-      splitLetters(words[i]);
-    }
+    <script>
+        var words = document.getElementsByClassName('word');
+        var wordArray = [];
+        var currentWord = 0;
 
-    function changeWord() {
-      var cw = wordArray[currentWord];
-      var nw = currentWord == words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
-      for (var i = 0; i < cw.length; i++) {
-        animateLetterOut(cw, i);
-      }
+        words[currentWord].style.opacity = 1;
+        for (var i = 0; i < words.length; i++) {
+            splitLetters(words[i]);
+        }
 
-      for (var i = 0; i < nw.length; i++) {
-        nw[i].className = 'letter behind';
-        nw[0].parentElement.style.opacity = 1;
-        animateLetterIn(nw, i);
-      }
+        function changeWord() {
+            var cw = wordArray[currentWord];
+            var nw = currentWord == words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
+            for (var i = 0; i < cw.length; i++) {
+                animateLetterOut(cw, i);
+            }
 
-      currentWord = (currentWord == wordArray.length - 1) ? 0 : currentWord + 1;
-    }
+            for (var i = 0; i < nw.length; i++) {
+                nw[i].className = 'letter behind';
+                nw[0].parentElement.style.opacity = 1;
+                animateLetterIn(nw, i);
+            }
 
-    function animateLetterOut(cw, i) {
-      setTimeout(function () {
-        cw[i].className = 'letter out';
-      }, i * 80);
-    }
+            currentWord = (currentWord == wordArray.length - 1) ? 0 : currentWord + 1;
+        }
 
-    function animateLetterIn(nw, i) {
-      setTimeout(function () {
-        nw[i].className = 'letter in';
-      }, 340 + (i * 80));
-    }
+        function animateLetterOut(cw, i) {
+            setTimeout(function () {
+                cw[i].className = 'letter out';
+            }, i * 80);
+        }
 
-    function splitLetters(word) {
-      var content = word.innerHTML;
-      word.innerHTML = '';
-      var letters = [];
-      if (content.charAt(0) == 'V') {
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'V'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'I'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'D'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'E'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'O'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = '\xa0'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'T'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'R'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'A'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'N'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'S'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'L'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'A'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'T'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'O'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'R'; word.appendChild(letter); letters.push(letter);
-      }
-      else if (content.charAt(0) == 'व') {
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'वी'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'डि'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'यो'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = '\xa0'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'अ'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'नु'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'वा'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'द'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'क'; word.appendChild(letter); letters.push(letter);
-      }
-      else if (content.charAt(0) == 'వ') {
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'వీ'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'డి'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'యో'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = '\xa0'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'అ'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'ను'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'వా'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'ద'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'కు'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'డు'; word.appendChild(letter); letters.push(letter);
-      }
-      else if (content.charAt(0) == 'भ') {
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'भि'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'डि'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'यो'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = '\xa0'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'अ'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'नु'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'वा'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'द'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'क'; word.appendChild(letter); letters.push(letter);
-      }
-      else if (content.charAt(0) == 'ভ') {
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'ভি'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'ডি'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'ও'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = '\xa0'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'অ'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'নু'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'বা'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'দ'; word.appendChild(letter); letters.push(letter);
-        var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'ক'; word.appendChild(letter); letters.push(letter);
-      }
+        function animateLetterIn(nw, i) {
+            setTimeout(function () {
+                nw[i].className = 'letter in';
+            }, 340 + (i * 80));
+        }
+
+        function splitLetters(word) {
+            var content = word.innerHTML;
+            word.innerHTML = '';
+            var letters = [];
+            if (content.charAt(0) == 'V') {
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'V'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'I'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'D'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'E'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'O'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = '\xa0'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'T'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'R'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'A'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'N'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'S'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'L'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'A'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'T'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'O'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'R'; word.appendChild(letter); letters.push(letter);
+            }
+            else if (content.charAt(0) == 'व') {
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'वी'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'डि'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'यो'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = '\xa0'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'अ'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'नु'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'वा'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'द'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'क'; word.appendChild(letter); letters.push(letter);
+            }
+            else if (content.charAt(0) == 'వ') {
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'వీ'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'డి'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'యో'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = '\xa0'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'అ'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'ను'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'వా'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'ద'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'కు'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'డు'; word.appendChild(letter); letters.push(letter);
+            }
+            else if (content.charAt(0) == 'भ') {
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'भि'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'डि'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'यो'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = '\xa0'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'अ'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'नु'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'वा'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'द'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'क'; word.appendChild(letter); letters.push(letter);
+            }
+            else if (content.charAt(0) == 'ভ') {
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'ভি'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'ডি'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'ও'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = '\xa0'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'অ'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'নু'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'বা'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'দ'; word.appendChild(letter); letters.push(letter);
+                var letter = document.createElement('span'); letter.className = 'letter'; letter.innerHTML = 'ক'; word.appendChild(letter); letters.push(letter);
+            }
 
 
-      wordArray.push(letters);
-    }
+            wordArray.push(letters);
+        }
 
-    changeWord();
-    setInterval(changeWord, 4000);
+        changeWord();
+        setInterval(changeWord, 4000);
 
 
-  </script>
+    </script>
 </body>
 
 </html>
