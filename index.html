@@ -10,7 +10,8 @@
         href="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/fav.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
     <style>
@@ -496,6 +497,106 @@
     } */
     </style>
 
+    <style>
+        a a:hover {
+            text-decoration: none;
+        }
+
+        .logo a {
+            text-decoration: none;
+        }
+
+        .logo a img {
+            width: 45px;
+            margin-right: 15px;
+        }
+
+        nav {
+            box-sizing: border-box;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 5em;
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+        }
+
+        nav a {
+            color: black;
+        }
+
+        .logo {
+            flex: 1;
+        }
+
+        .logo a {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        #currentPageLI {
+            background-color: #5E17EB;
+            color: white;
+        }
+
+        li:hover,
+        #currentPageLI:hover {
+            color: black;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+
+        .menu li {
+            padding: 15px 10px;
+            font-size: 15px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+        }
+
+        .bottom-nav {
+            font-size: 30px;
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav {
+                display: block;
+                position: relative;
+                padding: 15px 20px;
+            }
+
+            .menu {
+                margin-top: 15px;
+                display: none;
+            }
+
+            .menu.active,
+            .bottom-nav {
+                display: block;
+            }
+
+            .bottom-nav {
+                position: absolute;
+                top: 15px;
+                right: 20px;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+
 
 </head>
 
@@ -506,27 +607,25 @@
     </nav>
 
 
-    <header class="w3-top">
-        <div class="w3-bar w3-white w3-card" id="myNavbar">
-            <a href="#" class="w3-bar-item w3-wide">
-                <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/logo.png"
-                    style="position:absolute; height:35px; margin-left: 5em;"></img>
-            </a>
-            <div class="w3-right w3-hide-small" style="padding-right: 5rem;">
-                <a href="#" class="w3-bar-item w3-button" style="background-color: #5E17EB; color:white"
-                    id="home">HOME</a>
-                <a href="http://192.168.198.31:8080/about" class="w3-bar-item w3-button">TEAM</a>
-                <a href="http://192.168.198.31:8080/demo" class="w3-bar-item w3-button">DEMO</a>
-                <a href="http://192.168.198.31:8080/login" class="w3-bar-item w3-button">SIGN IN</a>
-                <a href="http://192.168.198.31:8080/signup" class="w3-bar-item w3-button">SIGN UP</a>
-
-            </div>
-            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
-                onclick="w3_open()">
-                <i class="fa fa-bars"></i>
+    <nav>
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/logo.png"
+                style="height:35px;"></img>
+        </div>
+        <div class="bottom-nav">
+            <a href="#">
+                <ion-icon name="menu-outline"></ion-icon>
             </a>
         </div>
-    </header>
+        <ul class="menu">
+            <li id="currentPageLI">HOME</li>
+            <li><a href="http://192.168.198.31:8080/about">TEAM</a></li>
+            <li><a href="http://192.168.198.31:8080/demo">DEMO</a></li>
+            <li><a href="http://192.168.198.31:8080/login">SIGN IN</a></li>
+            <li><a href="http://192.168.198.31:8080/signup">SIGN UP</a></li>
+        </ul>
+    </nav>
+
 
     <div class="introSuperContainer">
         <div class="introContainer">
@@ -586,7 +685,8 @@
     <div class="heading-block textBoldest" style="margin: 4em 0 1em 0">HOW IT WORKS</div>
     <div class="cardglassSuperContainer">
         <div class="card-container">
-            <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/soundwave2.png" class="soundwaveBG"></img>
+            <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/soundwave2.png"
+                class="soundwaveBG"></img>
 
             <div class="card glass">
                 <div class="card-content">
@@ -823,8 +923,20 @@
 
         changeWord();
         setInterval(changeWord, 4000);
+    </script>
 
-
+    <script>
+        $(function () {
+            $(".bottom-nav").on("click", function () {
+                if ($(".menu").hasClass("active")) {
+                    $(".menu").removeClass("active");
+                    $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
+                } else {
+                    $(".menu").addClass("active");
+                    $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
+                }
+            });
+        });
     </script>
 </body>
 
