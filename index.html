@@ -597,11 +597,116 @@
         }
     </style>
 
+    <style>
+        #myNav { 
+            display: block;
+            width: 0%;
+            transition: 0.3s;
+            position: fixed;
+        }
+
+        .overlay {
+            height: 30em;
+            width: 40em;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            backdrop-filter: blur(10px);
+            background-color: rgb(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px -1px rgb(117, 116, 116);
+            border-radius: 2em;
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay-content {
+            visibility: hidden;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            text-align: center;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #2c2b2a;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay a:hover,
+        .overlay a:focus {
+            color: #000000;
+        }
+
+        .closebtn {
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            font-size: 20px;
+        }
+
+        .iUnderstand {
+            padding: 0.5em 1em;
+            background-color: #5E17EB;
+            border: none;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .overlay{
+            /* z-index: 5; */
+            position: absolute;
+            /* top: 20px;
+            right: 45px; */
+            font-size: 20px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .overlay a {
+                font-size: 10px;
+            }
+
+            .overlay img {
+                display: none;
+            }
+
+            .iUnderstand {
+                font-size: 12px;
+            }
+
+            .overlay .closebtn {
+                z-index: 5;
+                font-size: 40px;
+                /* top: 15px;
+                right: 35px; */
+            }
+        }
+    </style>
 
 </head>
 
 
 <body>
+
+    <div id="myNav" class="overlay">
+        <div class="overlay-content" id="overlay-contentID">
+            <img src="../static/images/router-img.png" width="400em";/><br><br>
+            <a href="#">CONNECT TO NITS INTERNET DISTRIBUTION FOR SEAMLESS NAVIGATION!</a>
+            <br>
+            <div class="closebtn" onclick="closeNav()">
+                <button class="iUnderstand" type="submit" style="text-align:center;">Yes, I Understand</button>
+            </div>
+        </div>
+    </div>
+
+
     <nav>
         <div class="logo">
             <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/logo.png"
@@ -614,10 +719,18 @@
         </div>
         <ul class="menu">
             <li id="currentPageLI">HOME</li>
-            <a href="http://192.168.198.31:8080/about" style="text-decoration:none"><li>TEAM</li></a>
-            <a href="http://192.168.198.31:8080/demo" style="text-decoration:none"><li>DEMO</li></a>
-            <a href="http://192.168.198.31:8080/login" style="text-decoration:none"><li>SIGN IN</li></a>
-            <a href="http://192.168.198.31:8080/signup" style="text-decoration:none"><li>SIGN UP</li></a>
+            <a href="http://192.168.198.31:8080/about" style="text-decoration:none">
+                <li>TEAM</li>
+            </a>
+            <a href="http://192.168.198.31:8080/demo" style="text-decoration:none">
+                <li>DEMO</li>
+            </a>
+            <a href="http://192.168.198.31:8080/login" style="text-decoration:none">
+                <li>SIGN IN</li>
+            </a>
+            <a href="http://192.168.198.31:8080/signup" style="text-decoration:none">
+                <li>SIGN UP</li>
+            </a>
         </ul>
     </nav>
 
@@ -776,6 +889,32 @@
         </div>
     </footer>
 
+    <script>
+            setTimeout (
+            function () {
+                document.getElementById("myNav").style.width = "30em";
+                document.getElementById("overlay-contentID").style.visibility = "visible";
+            }
+            , 2000
+        );
+        // setTimeout (
+        //     function () {
+        //         document.getElementById("overlay-contentID").style.visibility = "visible";
+        //     }
+        //     , 5500
+        // );
+
+        function closeNav() {
+            document.getElementById("overlay-contentID").style.visibility = "hidden";
+            document.getElementById("myNav").style.width = "0em";
+        //     setTimeout (
+        //     function () {
+        //         document.getElementById("myNav").style.width = "0%";
+        //     }
+        //     , 500
+        // );
+        }
+    </script>
 
     <script>
         var coll = document.getElementsByClassName("faqQuesTitle");
