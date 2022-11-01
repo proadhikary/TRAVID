@@ -3,7 +3,7 @@
 ![HomePage](https://user-images.githubusercontent.com/55135657/188446021-80aec522-881a-43cb-b956-319918d20105.png)
 
 Travid is a small-scale Face-to-Face Video Translator project that lets users translate a short-duration video in one language to a selected language while maintaining the lip synchronisation, as well as an attempt at voice-cloning.
-
+<div align="center">Visit our website at: [travid.live](http://travid.live/)</div>
 # A Guide through our Website
 ![Github Guide 1](https://user-images.githubusercontent.com/55135657/188560174-2f2dfd44-248a-43ff-96a5-38fd0e3a7992.png)
 ![Github Guide 2](https://user-images.githubusercontent.com/55135657/188560181-131b10a6-f5db-4649-a6b6-3846f97e157f.png)
