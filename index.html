@@ -601,6 +601,7 @@
         #myNav { 
             display: block;
             width: 0%;
+            height: 0%;
             transition: 0.3s;
             position: fixed;
         }
@@ -893,6 +894,7 @@
             setTimeout (
             function () {
                 document.getElementById("myNav").style.width = "30em";
+                document.getElementById("myNav").style.height = "30em";
                 document.getElementById("overlay-contentID").style.visibility = "visible";
             }
             , 2000
@@ -907,6 +909,7 @@
         function closeNav() {
             document.getElementById("overlay-contentID").style.visibility = "hidden";
             document.getElementById("myNav").style.width = "0em";
+            document.getElementById("myNav").style.height = "0em";
         //     setTimeout (
         //     function () {
         //         document.getElementById("myNav").style.width = "0%";
