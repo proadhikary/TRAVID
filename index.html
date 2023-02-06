@@ -13,6 +13,11 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <script type="text/javascript">
+        var userip;
+    </script>
+    <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
+
 
     <style>
         ::-webkit-scrollbar {
@@ -598,7 +603,7 @@
     </style>
 
     <style>
-        #myNav { 
+        #myNav {
             display: block;
             width: 0%;
             height: 0%;
@@ -661,7 +666,7 @@
             cursor: pointer;
         }
 
-        .overlay{
+        .overlay {
             /* z-index: 5; */
             position: absolute;
             /* top: 20px;
@@ -698,7 +703,8 @@
 
     <div id="myNav" class="overlay">
         <div class="overlay-content" id="overlay-contentID">
-            <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/router-img.png" width="400em";/><br><br>
+            <img src="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/router-img.png" width="400em"
+                ; /><br><br>
             <a href="#">CONNECT TO NITS INTERNET DISTRIBUTION FOR SEAMLESS NAVIGATION!</a>
             <br>
             <div class="closebtn" onclick="closeNav()">
@@ -718,18 +724,18 @@
                 <ion-icon name="menu-outline"></ion-icon>
             </a>
         </div>
-        <ul class="menu">
+        <ul class="menu" id="menuID">
             <li id="currentPageLI">HOME</li>
-            <a href="http://192.168.198.97:8080/team" style="text-decoration:none">
+            <a id="teamPageLI" href="http://192.168.198.97:8080/team" style="text-decoration:none">
                 <li>TEAM</li>
             </a>
-            <a href="http://192.168.198.97:8080/demoOut" style="text-decoration:none">
+            <a id="demoPageLI" href="http://192.168.198.97:8080/demoOut" style="text-decoration:none">
                 <li>DEMO</li>
             </a>
-            <a href="http://192.168.198.97:8080/login" style="text-decoration:none">
+            <a id="signinPageLI" href="http://192.168.198.97:8080/login" style="text-decoration:none">
                 <li>SIGN IN</li>
             </a>
-            <a href="http://192.168.198.97:8080/signup" style="text-decoration:none">
+            <a id="signupPageLI" href="http://192.168.198.97:8080/signup" style="text-decoration:none">
                 <li>SIGN UP</li>
             </a>
         </ul>
@@ -753,8 +759,8 @@
                     style="text-align:left; font-weight: 700; font-size: 21px; color: gray; margin-bottom: -16px; margin-top: 4.5em;">
                     Automatically Translate your .mp4 videos</div>
                 <div style="text-align:left; font-weight: 700; font-size:21px; color:gray;">into 4 languages</div>
-                <div button>
-                    <a href="http://192.168.198.97:8080/login" button class="submitButton">
+                <div button id="submitButtonID">
+                    <a href="http://192.168.198.97:8080/login" button class="submitButton" id="submitButtonHrefID">
                         <div style="margin-left: 1em;"> Continue</div>
                         <div class="submitButtonSmallCircle"><i class="arrow right"></i></div>
                     </a>
@@ -891,7 +897,7 @@
     </footer>
 
     <script>
-            setTimeout (
+        setTimeout(
             function () {
                 document.getElementById("myNav").style.width = "30em";
                 document.getElementById("myNav").style.height = "30em";
@@ -910,12 +916,12 @@
             document.getElementById("overlay-contentID").style.visibility = "hidden";
             document.getElementById("myNav").style.width = "0em";
             document.getElementById("myNav").style.height = "0em";
-        //     setTimeout (
-        //     function () {
-        //         document.getElementById("myNav").style.width = "0%";
-        //     }
-        //     , 500
-        // );
+            //     setTimeout (
+            //     function () {
+            //         document.getElementById("myNav").style.width = "0%";
+            //     }
+            //     , 500
+            // );
         }
     </script>
 
@@ -1074,6 +1080,37 @@
                 }
             });
         });
+    </script>
+
+    <script type="text/javascript">
+
+        if (typeof userip == 'undefined') {
+            console.log('Disable adblocker');
+            document.getElementById('overlay-contentID').innerHTML = "Disable AdBlocker and Try Again!";
+            document.getElementById('overlay-contentID').style.backgroundColor = "rgba(183, 0, 0, 0.8)";
+            document.getElementById('overlay-contentID').style.color = "white";
+
+        }
+
+        (function () {
+            console.log(userip);
+            if (userip != '103.119.241.74') {
+                document.getElementById("teamPageLI").href = '#';
+                document.getElementById("demoPageLI").href = '#';
+                document.getElementById("signinPageLI").href = '#';
+                document.getElementById("signupPageLI").href = '#';
+                document.getElementById("submitButtonHrefID").href = '#';
+                document.getElementById("menuID").onclick = toggleWarning;
+                document.getElementById("submitButtonID").onclick = toggleWarning;
+
+                function toggleWarning() {
+                    document.getElementById("myNav").style.width = "30em";
+                    document.getElementById("myNav").style.height = "30em";
+                    document.getElementById("overlay-contentID").style.visibility = "visible";
+                }
+
+            }
+        })();
     </script>
 </body>
 
