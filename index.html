@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewpoint" content="width=device-width">
     <title>TRAVID | HOME</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="icon" type="image/x-icon"
         href="https://raw.githubusercontent.com/human71/TRAVID/main/static/images/fav.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script type="text/javascript">
         var userip;
     </script>
@@ -51,6 +51,7 @@
         .w3-top {
             position: sticky;
             width: 100%;
+            background-color: red;
         }
 
         .w3-bar .w3-button {
@@ -523,6 +524,7 @@
             align-items: center;
             padding: 0 5em;
             box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+            height: 3.8em;
         }
 
         nav a {
@@ -558,7 +560,7 @@
         }
 
         .menu li {
-            padding: 15px 10px;
+            padding: 33px 10px 16px 10px;
             font-size: 15px;
         }
 
@@ -696,6 +698,82 @@
         }
     </style>
 
+<style>
+    .ourTeamHeading {
+      /* background-image: linear-gradient(135deg, #caaeffb0, #f3ecff); */
+      background-image: url("../static/images/HeaderBGgradient.png");
+      background-repeat: no-repeat, repeat;
+      background-size: cover;
+      margin-top: 3em;
+      font-family: Roboto;
+    }
+
+    .display-3 {
+      margin: 2em 0 2em 0;
+      font-size: 3em;
+      font-weight: 400;
+    }
+
+    #cards .card {
+      border-radius: 20px;
+      min-height: 100%;
+    }
+
+    #cards .heading-border {
+      position: absolute;
+      width: 100%;
+      top: 60%;
+    }
+
+    #cards .card .user-picture img {
+      position: absolute;
+      top: -20%;
+      right: 10%;
+      background: #f8f9fa !important;
+      padding: 10px;
+    }
+
+    #cards .card .user-content .user-name {
+      margin-right: 150px;
+    }
+
+    .user-name {
+      margin-bottom: 1em;
+    }
+
+    .mb-0 {
+      margin-top: 3.5em;
+      font-size: 0px;
+      transition: 0.3s;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .card-body {
+      border-radius: 1em;
+      box-shadow: 0px 0px 10px -5px rgb(66, 66, 66);
+      min-height: 90px;
+      transition: 0.3s;
+    }
+
+    .card-body:hover .mb-0 {
+      font-size: 15px;
+    }
+  </style>
+
+  <style>
+    #openTeamID {
+        display: none;
+    }
+
+    #openHomeID {
+        display: block;
+    }
+  </style>
 </head>
 
 
@@ -725,10 +803,8 @@
             </a>
         </div>
         <ul class="menu" id="menuID">
-            <li id="currentPageLI">HOME</li>
-            <a id="teamPageLI" href="http://192.168.198.97:8080/team" style="text-decoration:none">
-                <li>TEAM</li>
-            </a>
+            <li id="homePageLI" onclick="openHome()">HOME</li>
+            <li id="teamPageLI" onclick="openTeam()">TEAM</li>
             <a id="demoPageLI" href="http://192.168.198.97:8080/demoOut" style="text-decoration:none">
                 <li>DEMO</li>
             </a>
@@ -742,6 +818,7 @@
     </nav>
 
 
+<div id="openHomeID">
     <div class="introSuperContainer">
         <div class="introContainer">
             <div class="leftText">
@@ -884,6 +961,128 @@
             </div>
         </div>
     </div>
+</div>
+
+<div id="openTeamID">
+    <div class="ourTeamHeading">
+        <div class="row pb-4">
+          <div class="col-12 text-center">
+            <div class="display-3" style="font-weight: 1000; font-family: Roboto;">Our Team</div>
+          </div>
+        </div>
+      </div>
+    <div>
+        <section id="cards">
+          <div class="container py-2">
+            <div class="row" style="margin-top:2em;">
+              <div class="col-lg-4 col-md-6 mb-4 pt-5">
+                <div class="card shadow-sm border-0">
+                  <div class="card-body">
+                    <div class="user-picture">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnZVD6IjACLwZhkGEdza_K_u7jgmncS9611RBU55QYtqFDM54ZUkkFbhlio5qWNdpvv70&usqp=CAU"
+                        class="shadow-sm rounded-circle" height="130" width="130" />
+                    </div>
+                    <div class="user-content">
+                      <h5 class="text-capitalize user-name">Sivaji Bandyopadhyay</h5>
+                      <p class=" text-capitalize text-muted small blockquote-footer">Project Supervisor</p>
+    
+                      <p class="small text-muted mb-0">Director at National Institute of Technology, Silchar.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    
+    
+      <div>
+        <section id="cards">
+          <div class="container py-2">
+            <div class="row" style="margin-top:2em;">
+              <div class="col-lg-4 col-md-6 mb-4 pt-5">
+                <div class="card shadow-sm border-0">
+                  <div class="card-body">
+                    <div class="user-picture">
+                      <img
+                        src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFRgVFRYYGBgYHBoaGhgYGhgaGBgaGBkZGRgcGBgcIS4lHB4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHjQhISExNDQ0NDQ0MTQxNDQ0NDQ0NDQxNDE0NDQ0NDQ0NDQ0NDQ0ND80NDQ0PzExMTQxPzQ/Mf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAIDBAYBBwj/xABCEAACAQIDBAcFBQYFBAMAAAABAgADEQQSIQUxQVEGImFxgZGxEzKhwfAHUmJy0SMzQoKy4SQ0osLxFFNjkhVDc//EABoBAAMBAQEBAAAAAAAAAAAAAAECAwQABQb/xAAhEQACAgICAwEBAQAAAAAAAAAAAQIRAyESMQQiQTJRYf/aAAwDAQACEQMRAD8An2Yf8U/cvnmOvkZqam6ZLAf5o/lHkCJra3GY8pYF4jQyESbFDXxkNoidiNbETOGOtOERqOYooogIEgLsUeiaxKsi2li1oU2duFgF3FjvAHlGSsJZUoCA7gE7tdT3Rr4/DoQGYjlcDw52nmm1dusXzgBGPG5Y2HYdBBeL2w9TRyD4AX77CUWNHWeyValG4GcDNe261+OsZUyg+8Nd2onjSY5r3ueHw3eUP4DbDPlRmspOl/4eJse2GWNVo5Oz0TJxjCJnsDtR0OVmDqL2J325X5Qrs7aS1mCrre/f1Rf9fKQcWhy0ROWj3FpGWkuIGNaNJnTGNAMhExhM6ZG5nWdZxT1h3z03YX7hO6eYKdR3z1DYn7lO6XwfonIIQF0lHUEOwL0gXqSvkfkCMHU3FjoBA2Jr5iLbpNtfFMHKE2UeF9IGo4ou4H8PLwkMcL2CTDWvb5zsflil+CEsdQFsV/J6Fb/Ka2pMezZcSn5CPiD8prUqq40PhJ5FZoKGJkCmT4mVwIiVCNnTOXnZyMDsUcs4Fki2AJJsBqSeAAuZy2dQqjhEZzuWx8zYeZNp5n0i209ap1jlVdFVdw11Pf2w/tDaT1qjpTOhBRWLBQEO8HgRx1F+2YmshL5N5uRw3358ZWKpDRjY7HVvakAC1h9GLC7EqPqqsQONtJvugfR3DuQ+I1K9ZUJsrEg3zDj3T0vLhwLKiWG4ADyAEbkivCu0fPdTo/WXejeRjDsyqnvKfIz6AqY2gp1VdOfDwgDHLh67XAyns/SI5tFo4k9UeSpVqDSza6dkI7P2q6svVNkI0GgOt9T8O6azF7CCA5eOoPfMdj6rUzlI3dm8840ZKWmSyYuJ6jh1SrRFUMATvXkeXZulR11mGwPSAqnsiTuLG2mpvlF+QHD1ms6IUK+IonKAwQ2B0B7u0iJPH/CHRZIjCJNicM6e+hU9ul+4yvmmZppjKQiZE8feMeAYavvDv+YnqOx/3Kd08up+8O8eonqeyh+yTul8H6EkXLzG9J9vZW9moBAPWJ9BNXXUsCqm19CeQ7O2eedOMOlPIibusSSbkntJlM7vQqMf0j1rtxFhp33lPBqM6/W+XNuj9oPyL85TwZOdbc/SNCKUScns0mVuyKOzGKNQCLEH/EofwuPgZeXE8QQN0HY42r0zzzj4G0OLQQW04CJLouxi4jMNbX5x8dkUcB4CNMkKv9OGIHsnJ2BhaHLAvTDHhKBQaNUsBbgFszk+BA8YbUTHdPWtVphraIStuF261+26xonRjbM5s/Cs7ngOPymo2dsdVOfQm1hzud5tCeyNkotNCBqyi/M8YcXCpSUNUKg/wqTr4iCUm3o2wjGKtg7CbEqE5gSo32ktSk6MFZj333RuI6VqllRh8JBiNripZzvP3YrTK3YWp7B9oMxfXnzlWps40jobyhU6RezUBWyjz84sL0kpt77g91p1Wc3XYYw9S+h0gXpXsBGpNUQWK66fOEsLj8NUayVLMTYA6XPIQs9HOjIw3gjzHd2x4JpiTqSPDF39o36cp7F9jNVjRxCEaLUUg/mSxHml/GeQ4hMlV04qzA/ysV+U9g+xupeliB+ND26qR/tE0rZgn3R6DicKrqVZQwPOYbpDsI0TnS7Id/EqeR7J6DIq1IMpVhcEWI5gxZ41JC2eTKYmhDbuzP8Ap6pAN0frKezl4ShbSefOPF0Vi7RHmsQeAt6iepbIa9FCL6gHWeRbXcqgI+8P0+c9O6GOWwVAsSSUGp7CQJq8eP0nJ7DhnnHT/Ug8gZ6QZ5x0+Hukfi+rQ5uzkYzbfvqfwL85TwR66y9t4ddPyL8Lyng/fWVh+Sb7NHmnIr/VoobAVtpfvaLcmt5hrTRoeqJndqHr0j+NR8poKfuju/SJPovJiaNtOmNkRWKKICOAgUQocgmO+0WkQaTjcVKn+Ug/ObFYA6cYctTpuL2R7HsDgXJ/mCCOkFMnw+2KS0kC4ikjhQCXJuulrWVWJPKywBisJRcln2gSzb8uHrv/AKmy3HlB+y6LVBUtcquRk00AZ2DsBx1UDs8ZK2FJpuSxVlsUFiQ+t2uQLDTdqI6STLLkyhj9n00sUrtVvvLU2plSPzEg+B7NIX2VhWdAwqUxzU1EVh3ozAjxtARvbcb/ANpJQ2O9eqFUXsMz2FyB9ARnxGXJBDbOGRQB7Wm7H3kp1M+TtcgWHnwjMOMCLA4eq7cWqV8ov2JSTQd798hTZbUzUpkjMtmuNLqeQ7OMi9mbZbWN73+RgVI6Sk+wjiqNNrHD0lS17j2tR8x4dZ72M1vQTa9Ss5oVCt1DNfMXcZWy5XWw7CPCAMJQVkQBVRlvmYXOe/PgLW4eYlnZ2ynau70XNN1VBnU2OYi5vodLZeyBtWHi0tDemnQWtRNTFKyOhcuwBIdcx3FToQL2uCb77TSfYxSOTEMbgXpr2XGcn5ecCdKOkuLSnVwOJRKhZEZaq3BCN95QLNuPLXzmz+yXChcAr/xVXdz4MUXThol/GVi0ZZJm5iiijiGf6W4IPQZh7yXYczoQR8b+EwIOn1wnrNemGUqdxFp5ZXo5HdPusV/9dPlMOeNMZOgbtZSU/mXTv/4np/RBLYOgPwfMzzfHJ1B3gz1Do+mXD0hyQS2D8kuVzoItunnXTlAAp1O+54HjPRGOkwHTxeqn8x+W6Tzu2isTEbdHWQ80HLtEp4E9dZf28utM30yC3PnKOC98S0F6kpL2NDeKOsJ2E4pbX/8ArP40/qtNDR91e6ZzbnuKfxp8SLzR0fcH0d5k59GiSEROGOjTJOxEIR0bEBChh6yDatEVKLoxshU5juAUdYknnukwjMTSzo6cHRhr2ggad+sN0dHsFdG9l3w1N1Gc0/a03CjV6b1Abrci5VlVwONmFr2vX2hstyDk66a9ZSp8LXutuNwD2CE+j+NCUsnI6jt7x3/CcxOPVSTlU8SSB674HKzfCFGPbB5QWynTkN99LeN7Tc/Z1s32aPiH96poBbSw4AzN4raftHAJyoPeIvry3CObpTn/AGaEqqXA4BtYUwyigz0m2YWf2tO2ZbsA1wGU70awuFO7hwmbdFbcjK3FdDrzB4jwB7IUxHS4LkVkZzpcqV7OZlDaeKU1BUpg5Co0ItY2F9DCw8US4HDuCcqEka66eZ327BNZ0dwmVmZvfY5mPM9nYAAIDwGPuB9GaHZ+KuwtJt7GktAvpZgx7dXNj1ChHIZs3+4wn9noZMRWp3Ps/ZU3Vf4QSzg2HeGgTpPjQXrI24U8hFtQWAY2+HxhT7LHaoXc36qCnfucnv5ymJvlRmzRXA9KiiimswnGnmW11/xFUfjM9NaecbYW+IqH8ZmXyOgoEYxeoO/0B/WepbNW1GmOSr6CeaYxOqO8T0/DrZFHJQPIQYX6Mkl7sfUPVM8/6bt17clm/qHqnuM8/wCmSXqsQQbAaXvwiTuTRZaMntwfuf8A8x6wfhR1x3wltxerRI4IN/fBuE1de+aI/micjTZYpzJFOoAP24P2THlY/GaLD+4PrfM7tsfsX8JoMA90U9g9BFktGhjmEbHtGybE2KdE5OiKEQkiRgj4bOM7XBp13SxCsMwPaLA+olLaWIsDDu3MKTkdQTluDa3ukfqBM5j0up5xV2b8criCzigtwASx4QbXw7k3AtrLGCDksVTMQTv0t4wrhKaZruuZeQNj2y8aOdtgPD0HGh584VbFOi5XW684QqLS/gSx7W3eEpYvCOwsCCDw5zpNBSJtm1txBuCdJqtl1+sDMdsOk4urLYA6H9JqtnHLItWx79SDbGEc1XJBsxGViDkY5V6ubdfsnoPQvZRoUmYgAuQQotZVUWUacfePjLewsOGogkA5jfUAg2sBe/dDQFpoxxrZgy5L9R0UURlbIEVd8qk8gT5Cedv1mZvvEnzmw6Q4vJTyg9ZtPDifh8ZlUpzH5ErY8SpjEso/MvqJutr49aFBqjblGnfwmOxadXl1k/qEtfadXth0S/vPr4AfrDh3GidexiNq9LMTXb32Vb6KpsPhv8YJzMdbknjrx/WRqkmtLxikhmSVMQ7gBmvlBA3DQ68J3D++p3ajwkeWTUd47xGFZo79sUV4oBSjtgfsX/KfSFtkG9JTzCnzAgraa3puOyEtgtein5F/pESb0XaLjThjnjRI2Bs5OiK07AzhAx94wCOEBw+wIsRvmS2nRKOU3W3X4jhaapxIK+CWqtm0IBsRvGhhRXHKmZKhTynda9/HTWD9qZlHV0tLdbGezYq447+cq7Qx6m2S26PGzS5aBWFrOWsNL8eM2OEpkoO7UzIU61muN8L0dulRbTdGlFnRnXYWbD5dZYwjFmEB0Nplz8od2WtrE6n0iVXZT9I9a2MtqFMfgX0EvQPsXHo1MKrAlAquL2KkqGF+8EEdkLM4GpIA5zVGqPMmqkPkOIrKqlmNgN8rYralNN7AngBrfymb2hjnrHXRRuUepk55VECRXxuJas5Y7tyjkseiTlOnJ0WYJScnY6K+JS67v4k/rWD/ALU6hzUV4BWJ81hs0rlRzZP6hF092P7ejnUXenu7jYn0mjE6iK1s8nXWSFYxF/4kq+E0roEkNyySn7y94jmGnCco++O8TmxGaOw+jFHWii2CyljhdH7QZb6On9gv5V+AAlbEDqN3SXou37FR2ehsfSCa0amFSJyOaNkaJNbFaLLOidtOaOo4J0R0VoEdZ0R9NY1RLmzbe1QHfqQL69RSfW0eMW+h4bZh9ubPzO6OBcMdRwubjWZXEbKdDoQQOc0uFxXtS7n3s737Ou362klemDwgtpnoLHaRjf8Apn3S1g9ksx6x07IXfDi94QwKgaCdKbOWFEeB2YqC9rGFMMAJFmi9qFF5O2y0Y0R4fahpbURQepiERG/NYqp7+qkLJiFahi6T5RVpuQ688rDrLfep+cxFJjW2lQC/9xLdwIY+hhfprUNLale2mdaTaDfemoPfqs2Qjyief5MVZvzQAAsOA3d3ZHKkHbE2+mIAVwEcAA/dJGnVPy7YcFL+8yZMcl8MqaIVSTIkcqSntfbFPDICwJZjYKLX46m9rbvjJxi2UtBOlSuy/mU+F4E6b9J2pH2FLKXYdZt5W9hlAHHU+UyO0+ktesbBmprwVGK6HgzDVoHFPfcnjfXedP0E044NLYjYgpJuTe/Hn2yQCcCfGOAl0hWy1iqIVEYNmzXv2W9ZWo+8veJy31+nKcpjrL3ic0K7Zp4pHlii0CiFxdfCLoqf2Q13Zh5E3j2XSRdFD1GHJn+LX+c6a0atBxo20ewnLTOIzgEUcBHJQJ7I0ccpPQspJDVElTDseElUKu7U85Wxu1lQHiddL+s3Y/E17EnIZtGutIWuCx4Dh2/2gnovii+OTMb3WoP9BJHlBmJxhYFmNyePp+kl6Btnx6D7qVXPdlyj4v8ACaZYowhobDJ8jOYtzh8ZVTcrOzC/JjmHqfKF1xGYCXvtQ2OwYYhF0XR+6+hI7zMns3FEaE3H1unl5Y7Pax7SDFV9ZLh6oEHVHO+JKpvrIND0FqmJEH4rGb7a/wDEZWqaSglN6jqi3LMQoHfx7he8aELGejU/Zhsk1sS2IYdWloD+NuHbYeso/aoQNpMRxpUj/WPQA+M9V6KbJXDYdKYtcC7EaXY7z5zyL7T6l9p1N3VWmotvt7PN6sZvxxqkeXnfKTKezsSRbfNdsrbjqLZiRyOomIwLXhSjUIHDnNfGMlswNtHpGB28G95dez+8zPSDAYirVaqVzJoFykkgDsGvhxg/AY/jumiwe0LDU2Bk34sO0DnRj1Ua3HO+lue8cJKDp/abd3o1hlqKr7+Yb+VlII87d8p1+i1JxelUZTvs1iO64t8QYksFdDxlZlLxAQjitg4hNSl13ZkObs5/KDiTutbW2sk4SiOmhTiNu8PWdvEqajvHDtiMFhz2kUWT6tFAdZK6/XfK3RQ6OD99/jYmWzKfRbR6o/8AIfQX9DEl0aJGgMcKZlTH4xUZV0uQT3AG0bW2l1dJoweMpLkzLObQRbKgvxlSrjr9loKbF6Zifj5wJi9pF2yobDnPQhCMVVEuTYWxm27XC791yIGxe0CjIGGYPfWxNj1eHORql+PLvhb2JVdNLfxGxJ8baDsjukjtguvUWxhj7MaBONep/ClFvN3S1/BGmdxGhuTfXzmh6B4n2S4+p9ylTIHM3q/MCZ8r9S+Dcq/pY6SdNFbEGgaIehfK7kksVOjFbcB8bWmV2rsN8O1xdqbao++44BuR9Z3DYJ2bncBbnzuOzX4TR4TE4jIAwR1UZSrgkkCwsxvraxtpPPlHkfQQwuMUjOUVBX5R3sbQ3j9khVNSncA9YqQunMAjh4SPB7Gd1DFlQHXr3vbuB9ZncHY3EC1Em06D7AyH29QdY+4OKrztzMHjZlLD2qVKofKbhVQ6kbtcx9JR2V0jrJi87FsjsBkJ6oDEAW5ES2ONdiThJxdHsKG2k8B+0NydpYnsZB5U0nvlNrgH63Xnz30zfNj8Uf8AysP/AFAX5TTF7PJnpMH4TEZNTL1baeUCw1+BgpReWsNcfoZeLMUkaDB4gBAxUXOtryLE7ZvoNLcIKxGKJAA07Buldd+sqpCUarZ2PZtPQ/OaXDYxgAcxMyWyqdh5Q6mItof+NJVVJWwPXRo8Ntc310H15zm0auHqI2dFJA0IsGGtrZhrbzmRxe2lQWGp57rStU2kRTvfVzv42Xl3kxXCLDGTLmKooDdCSDfebka9sqB7WtzHGQ0sTcgnx8ZOya6dkwZ8fHY6bDt4p3N9WimYYmbjKvRkftqw4Z7+YvLTjjKmwB/iao7V+N4TVLoEdK9on/q2W+iIo472u7fFhO4CuXOW/hBPTVv8dW7wPJVhPYOKRELtbMRpfnPRwuo0Y59lna1bIoW/hM8lXXWS4/FGo5OtpTIl2xKNFhWXS5ku0cVdeyCcA+UamPxVfNO+HJkTuD4Q70ITOuMThakSOfWqWHdoTM7ean7MkzNihzFP4Z5nyrRq8SudhnCbNA10HITmKw+Q5h7rCzDtta/whJGsbcZ2ooIIMxrR78ZMHYTdl03R5Q7uHKcwSEMwPDT9JZqCCrKN7AuKwuc2lbEbOUi1uGn6wuEi9l2RqRzkF9ibYIw759XpKf5rAlPHdPDMc5arUZjcl2JNt5JJJ+uU9Sx9HqnQ/r3855XiTd3/ADN/UYyWzyvLxqKbX04mhllaglZZIGl46PLZ3NePS0jWOQRkLQYweJyybE7Q5H6tBWcAcJGzyvLWhZLZDiGJ3y0K2YINbKB6ypidBeOwfPST5NM5IMYYjNk5jfCeHa4U8QbQHhq1qi9/zhrCCzOvIjyi5txsZB+4inPaiKYdDlpr+sq7F0xNTuU+svON/efUiB2q5KtZh/27jvuf1hhs0zejGdIcRnrPU++5PgdRHYNzlt5Snize/eZLhmOW4m6GjJLZacRKbSNmMnoAcdZVsV9CFTjy+t0eASeM41vCStYQ2BIhYTZ/ZSuuIP5RvmKdhlM3P2VL+zrnmy/P9ZDK9Gvxl7M0mOXK9+chqNpLmOXMO0QazekyM9zHuJYwgDG/M6+EfjKYVrKdLE7xpIsEOr4mSZAAbCC6A4vlZCiaSUUxOJJRDbGZSx9MZGPIE+QnirakntM9s2i37N/yuf8ASRPEqcrE83zPiHgRWnROyh5rHKYla04J1TY6wphJidI1VuZwtedojWPFk5Ijx3AR9EW75FizdrCPbQTnVnEiVOuvO80FBr1F10YTNUnA1O/9Idz2CN2D1M5rlFhRqvZdo8pySe0XkfOKZ+CGsvVPeI7SPiRAG1CA7kbjTHxa00q4Gq93Sm7LckEDtvoTvOsy/SbB10V3NKoqqguSjgAAjQm1h5yMOzRNqjIbQQBiL79fgIzAnqnsMZiXzAMd9rHvG/T5xYUixsZtszNFnOSdJfp0iF13yrhKRJ7IQxVQAWlY9CMqmMqHdH0hc844W4ws5FaqbAz0H7LRbDVT+O3kAf0nnmLqDdPSvswT/Buebt46CZ8pu8Xs0DtcwZWWx8YSrixlDHLpf63GZj2YaRLgxZfEyaQYRroD9b5NmiumNQ0rJQIlF4gJyFkC9uVMlCqTwR/n8iJ4um4T13pjUthatt5Uj5TyNBKRs83zCRRH3ipxGWieexLJSsivHq++Mkchu6S0FuZGzSbDnf8AXCFJgkipvck7ryV3vIqc67xZHJCh1x1F/L8zASHWGsOSUF90eL0Blz/5B/vN8P0ilT2R5nzMUFHWe0dF9s0mw9NMwDIoVhmAIIHbvB5yXptUDbPxJ/AfUTyrFYUNTR/wqO3cLSk11QoGYLlYZVYqpFr2IBAOo4zDHbNEoozANwROYL+IfCNTd9czuk+CS7zVAiwlSqlFvexlB6rOxvfWS497WUSTZtE+8RKqybCWFXKmvLfBlerqYRxL5UPb8ICD3MeTo5HajXBnr/2aJbAKfvO5+NvlPISmms9d6E1suDopu6t/E6zPNm7xYuXQexNIwa+oIPb6GEq2K4GDKrdbSQZ62K62dwosg7L+seWjsM6qwLDq2Pgbi152sQWJUaG3nxIijcnyqhUWkxWVU00lpGjI6Rgume1UyVKQbr+7l9fhbynn6Cbvp7sGnRpHEB3Z3fVWsU61+HCwAtMGrbpSPZ5HlyblTJiIkjC2k6koZB9p0Tl5ycheh4UHfJ7WGmmhkCyV75CeyNbSAVANJwjfG5rRAXk02x0tEtEb4Xw9xlA3QUhsbQlSc3W0rFCSLuQcopLbtnJSgBkf5dPyr6QLjfd8D6GKKebj7NcjLJ+ktYD3xFFNkCDHY73zC+A90eEUUqib7GbU9wQLR3xRQTORM+6eo9Fv3ND8nyMUUhM9LwPocxUpL70UUiz1YFpeM5/adiih+ilhIooyBIyP2m/5Rfzr/unly8O6KKUj2eN5f7HyQRRSiMojOrORQ/RWSLvElqe4ZyKF9AQPMlSKKTiP8HcfCEqe9YopeIhfiiijgP/Z"
+                        class="shadow-sm rounded-circle" height="130" width="130" />
+                    </div>
+                    <div class="user-content">
+                      <h5 class="text-capitalize user-name">Partha Pakray</h5>
+                      <p class=" text-capitalize text-muted small blockquote-footer">Project Co-Supervisor</p>
+    
+                      <p class="small text-muted mb-0">Professor at National Institute of Technology, Silchar.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <div>
+        <section id="cards">
+          <div class="container py-2">
+            <div class="row" style="margin-top:2em;">
+              <div class="col-lg-4 col-md-6 mb-4 pt-5">
+                <div class="card shadow-sm border-0">
+                  <div class="card-body">
+                    <div class="user-picture">
+                      <img src="..\static\images\prot.png" class="shadow-sm rounded-circle" height="130" width="130" />
+                    </div>
+                    <div class="user-content">
+                      <h5 class="text-capitalize user-name">Prottay Adhikary</h5>
+                      <p class=" text-capitalize text-muted small blockquote-footer">Project Leader</p>
+    
+                      <p class="small text-muted mb-0">Undergrad Computer Science and Engineering Student at National
+                        Institute of Technology, Silchar.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 mb-4 pt-5">
+                <div class="card shadow-sm border-0">
+                  <div class="card-body">
+                    <div class="user-picture">
+                      <img src="..\static\images\SubhojitTRAVID.png" class="shadow-sm rounded-circle" height="130"
+                        width="130" />
+                    </div>
+                    <div class="user-content">
+                      <h5 class="text-capitalize user-name">Subhojit Ghimire</h5>
+                      <p class=" text-capitalize text-muted small blockquote-footer">Project Member</p>
+    
+                      <p class="small text-muted mb-0">Undergrad Computer Science and Engineering Student at National
+                        Institute of Technology, Silchar.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 mb-4 pt-5">
+                <div class="card shadow-sm border-0">
+                  <div class="card-body">
+                    <div class="user-picture">
+                      <img src="..\static\images\SugandhiTRAVID.jpeg" class="shadow-sm rounded-circle" height="130"
+                        width="130" />
+                    </div>
+                    <div class="user-content">
+                      <h5 class="text-capitalize user-name">Sugandhi Bandaru</h5>
+                      <p class=" text-capitalize text-muted small blockquote-footer">Project Member</p>
+    
+                      <p class="small text-muted mb-0">Undergrad Computer Science and Engineering Student at National
+                        Institute of Technology, Silchar.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+</div>
 
 
     <div style="margin-top: 160px;">&nbsp;</div>
@@ -1082,7 +1281,17 @@
         });
     </script>
 
-<script type="text/javascript">
+    <script>
+        function openTeam (){
+            document.getElementById("openHomeID").style.display="none";
+            document.getElementById("openTeamID").style.display="block";
+        }
+        function openHome (){
+            document.getElementById("openTeamID").style.display="none";
+            document.getElementById("openHomeID").style.display="block";
+        }
+    </script>
+<!-- <script type="text/javascript">
 
         if (typeof userip == 'undefined') {
             console.log('Disable adblocker');
@@ -1111,7 +1320,7 @@
 
             }
         })();
-    </script>
+    </script> -->
 </body>
 
 </html>
